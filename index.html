@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas Pessoal</title>
+
+    <!-- Link para o arquivo de estilo css-->
+     <link rel="stylesheet" href="style.css">
+
+    <!-- Link para o arquivo Manifest (essencial para PWA)-->
+     <link rel="manifest" href="manifest.json">
+
+    <!-- Ícones para diferentes dispositivos (opcional, mas bom para PWA)-->
+     <link rel="apple-touch-icon" href="icon-96.png">
+
+    <!-- Linha adicionada: o favicon específico para a guia do navegador-->
+     <link rel="icon" href="icon-48.png" type="image/png">
+
+     <meta name="theme-color" content="#3367D6"/>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Lista de Tarefas</h1>
+            <div class="input-area">
+                <input type="text" id="task-input" placeholder="Adicionar nova tarefa...">
+                <button id="add-task-btn">Adicionar</button>
+            </div>
+        </header>
+
+        <main>
+            <ul id="task-list">
+                <!-- As tarefas serão adicionadas aqui via JavaScript-->
+            </ul>
+        </main>
+    </div>
+
+    <!-- Link para arquivo JavaScript (sempre no final do body)-->
+    <script src="script.js"></script>
+</body>
+</html>
