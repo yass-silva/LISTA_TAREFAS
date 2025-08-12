@@ -37,7 +37,27 @@
         </main>
     </div>
 
+    <footer class="app-footer">
+        <p>❤ APP CRIADO NO CURSO SENAI ❤</p>
+    </footer>
+
     <!-- Link para arquivo JavaScript (sempre no final do body)-->
     <script src="script.js"></script>
+
+    <!-- Script para registrar o Service Worker -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker.register("/sw.js").then(
+                    function (registration){
+                        console.log("ServiceWorker registrado com sucesso no escopo: ", registration.scope);
+                    },
+                    function (err){
+                        console.log("ServiceWorker falhou no registro: ", err);
+                    }
+                );
+            });
+        }
+    </script>
 </body>
 </html>
